@@ -1,11 +1,15 @@
 .site-header {
   position: fixed;
-  top: 0;
+  top: 28px;
   left: 0;
   width: 100%;
-  z-index: 50;
+  z-index: 1050;
   color: #ffffff;
-  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    top 0.35s ease;
 }
 
 .site-header--hovered {
@@ -94,6 +98,10 @@
 }
 
 @media (max-width: 860px) {
+  .site-header {
+    top: 0;
+  }
+
   .site-header__nav {
     display: none;
   }
@@ -101,6 +109,7 @@
   .site-header__inner {
     grid-template-columns: auto 1fr auto;
     gap: 12px;
+    padding: 20px 16px;
   }
 
   .site-header__brand {

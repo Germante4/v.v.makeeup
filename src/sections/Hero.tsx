@@ -10,30 +10,15 @@ function Hero() {
         <div className="hero__overlay" />
 
         <div className="hero__content">
-          <p className="hero__eyebrow">Makeup artist • Beauty artist • Online trainings</p>
+          <p className="hero__eyebrow">
+            MAKEUP ARTIST • BEAUTY ARTIST • ONLINE TRAININGS
+          </p>
 
-          <h1 className="hero__title">Grožis slypi detalėse</h1>
-
-
-          <div className="hero__actions">
-            <a
-              href="https://www.treatwell.lt/"
-              target="_blank"
-              rel="noreferrer"
-              className="hero__button hero__button--primary"
-            >
-              Registruotis procedūrai
-            </a>
-
-            <a
-              href="https://contribee.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="hero__button hero__button--secondary"
-            >
-              Pirkti mokymus
-            </a>
-          </div>
+          <h1 className="hero__title">
+            Grožis slypi
+            <br />
+            detalėse
+          </h1>
         </div>
       </div>
     </section>

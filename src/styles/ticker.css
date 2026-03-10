@@ -1,8 +1,12 @@
 .ticker {
+  position: fixed;
+  left: 0;
+  width: 100%;
   background: #111111;
   color: #ffffff;
   overflow: hidden;
   white-space: nowrap;
+  z-index: 1100;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -12,16 +16,17 @@
   align-items: center;
   gap: 40px;
   min-width: max-content;
-  padding: 14px 0;
-  animation: tickerMove 26s linear infinite;
+  padding: 10px 0;
+  animation: tickerMove 45s linear infinite;
 }
 
 .ticker__item {
   position: relative;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   opacity: 0.95;
+  flex-shrink: 0;
 }
 
 .ticker__item::after {
@@ -36,5 +41,37 @@
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+/* Desktop – plonesnė juosta */
+@media (min-width: 861px) {
+  .ticker {
+    top: 0;
+  }
+
+  .ticker__track {
+    padding: 7px 0;
+  }
+
+  .ticker__item {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+  }
+}
+
+/* Mobile – storesnė kaip announcement */
+@media (max-width: 860px) {
+  .ticker {
+    bottom: 0;
+    top: auto;
+  }
+
+  .ticker__track {
+    padding: 9px 0;
+  }
+
+  .ticker__item {
+    font-size: 0.62rem;
   }
 }
